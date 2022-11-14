@@ -1,4 +1,3 @@
-
 html, body {
   height: 100%;
   width: 100%;
@@ -10,45 +9,56 @@ body{
     padding: 20px;
   }
 
-h1, h3, h4, h2 {
+h1, h2, h3, h4, h5, p{
  color: #F0EAD6;
 }
-.dp-menu{
+
+:root {
+  --cor-fundo: #8c7160;
+  --cor-hover: #1c1d60;
+  --cor-primaria: #F0EAD6;
+}
+
+.menu ul {
   list-style-type: none;
   padding: 0;
 }
-dp-menu ul{
-  list-style-type: none;
-  padding: 0;
-  background-color: #1c1d40;
+
+.menu ul {
+  background-color: var(--cor-fundo);
 }
-.dp-menu ul li{
+
+.menu ul li {
   display: inline;
   position: relative;
 }
-.dp-menu ul li a{
+
+.menu ul li a {
+  color: var(--cor-primaria);
   text-decoration: none;
-  padding: 20px;
-  color: #F0EAD6;
   display: inline-block;
+  padding: 10px;
   transition: background .3s;
+} 
+
+.menu ul li a:hover {
+  background-color: var(--cor-hover);
 }
-.dp-menu ul li a:hover{
-  text-decoration: none;
-  background-color: rgb(24, 139, 233)
-}
-/*sub menu*/
-.dp-menu ul ul{
+
+.menu ul ul {
   display: none;
+  left: 0;
   position: absolute;
-  
 }
-.dp-menu ul li:hover ul{
+
+.menu ul li:hover ul {
   display: block;
 }
-.dp-menu ul ul{
-  width: 150px;
+
+.menu ul ul {
+  width:150px;
 }
-.dp-menu ul ul li a{
+
+.menu ul ul li a {
   display: block;
 }
